@@ -17,22 +17,22 @@
     display: flex;
   }
   &__item:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 31px;
   }
   &__link{
-    padding-bottom: 4px;
-    @extend %quicksand-400;
+    padding:0 2px 4px;
+    @extend %Roboto-400;
     color: $title;
     text-transform: uppercase;
     transition: all .3s;
     &:hover{
-      @extend %quicksand-500;
+      @extend %Roboto-700;
       color: $accent;
       border-bottom: 1px solid $accent;
     }
   }
   &__link--activ{
-    @extend %quicksand-500;
+    @extend %Roboto-700;
     color: $accent;
     border-bottom: 1px solid $accent;
   }
