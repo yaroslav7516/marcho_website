@@ -80,8 +80,19 @@ footer{
     align-items: center;
     margin-top: 24px;
   }
-  &__social-title:not(:last-child){
+  &__social-item:not(:last-child){
     margin-right: 20px;
+  }
+  &__social-link{
+    transition: all .3s;
+    path{
+      fill: $default;
+    }
+    &:hover{
+      path{
+      fill: $accent;
+    }
+    }
   }
   &__nav{
     width: 170px;
@@ -660,7 +671,7 @@ footer{
   }
 
   &__item-title{
-    @extend %Roboto-700;
+    @extend %Roboto-400;
     color: $title;
     font-size: 22px;
     line-height: 32px;
