@@ -766,6 +766,14 @@ footer{
   &__error{
     color: $accent;
   }
+
+  &__text{
+    margin-bottom: 25px;
+  }
+
+  &__text--one{
+    margin-top: -30px;
+  }
 }
 
 
