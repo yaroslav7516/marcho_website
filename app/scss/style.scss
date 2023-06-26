@@ -160,6 +160,19 @@ footer{
 }
 
 
+.top{
+  &__container{
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 130px;
+    text-align: center;
+  }
+}
+
+
 .top-slider{
   background-image: url('../images/decor/top-slider-bg.png');
   background-repeat: no-repeat;
@@ -691,6 +704,67 @@ footer{
     right: -15px;
     top: 8px;
     background-image: url('../images/icons/arrow.png');
+  }
+}
+
+
+.modal{
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
+  &__links{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link{
+    color: #909090;
+    font-size: 22px;
+    @extend %Roboto-400;
+    text-transform: uppercase;
+    margin: 0 30px;
+  }
+
+  &__link--activ{
+    color: $accent;
+    @extend %Roboto-700;
+  }
+
+  &__label:nth-child(1){
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__label:nth-child(2){
+    display: block;
+    margin-bottom: 50px;
+  }
+
+  &__input{
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+    background-color: $bg;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__btn{
+    display: block;
+    width: 100%;
+    padding: 18px 0;
+    margin: 12px 0;
+    @extend %Roboto-400;
+    background-color: $title;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__error{
+    color: $accent;
   }
 }
 

@@ -44,3 +44,47 @@ a{
   max-width: 570px;
   margin: 0 auto 55px;
 }
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 2px;
+    background-image: url('../images/icons/home-icon.png');
+  }
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 10px;
+      right:  15px;
+      top: 9px;
+      background-image: url('../images/icons/angle-right.png');
+
+    }
+    &:last-child{
+      color: $accent;
+      padding-right: 0;
+      &::after{
+        display: none;
+      }
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
