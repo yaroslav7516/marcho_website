@@ -125,6 +125,10 @@ footer{
   &__text{
     margin-bottom: 30px;
   }
+  &__form{
+    display: flex;
+    align-items: center;
+  }
   &__form-input{
     margin-right: 8px;
     background-color: #fff;
@@ -141,8 +145,6 @@ footer{
   }
   &__form-btn{
     @extend %btn;
-    border: none;
-    cursor: pointer;
   }
 }
 
