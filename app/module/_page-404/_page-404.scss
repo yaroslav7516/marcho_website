@@ -14,7 +14,7 @@
   &__title{
     @extend %Roboto-700;
     font-size: 48px;
-    line-height: 60px;
+    line-height: 52px;
     color: #28384f;
     text-transform: none;
     margin-bottom: 25px;
@@ -25,5 +25,24 @@
   }
   &__link{
     @extend %btn;
+  }
+}
+
+@media (max-width: 1245px){
+  .page-404{
+    &__inner{
+      margin-right: 0;
+    }
+    &__img{
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .page-404{
+    &__img{
+      display: none;
+    }
   }
 }

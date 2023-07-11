@@ -92,3 +92,56 @@
     @extend %btn;
   }
 }
+
+@media (max-width: 1100px){
+  .contact{
+    &__inner{
+      display: block;
+    }
+    &__info{
+      margin-right: 0;
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+    &__form{
+      padding: 0;
+      box-shadow: none;
+    }
+    &__form-box{
+      display: block;
+      input{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .contact{
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 450px){
+  .contact{
+    &__info-title{
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .contact{
+    &__info-item{
+      &::before{
+        width: 50px;
+        height: 50px;
+        top: 12px;
+      }
+    }
+    &__info-item{
+      padding: 10px 0 10px 60px;
+    }
+  }
+}
