@@ -1,0 +1,244 @@
+.blog-one{
+  &__text{
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px 28px 0;
+    margin-bottom: 25px;
+    h4{
+      @extend %Roboto-700;
+      font-size: 22px;
+      color: $title;
+      margin-bottom: 20px;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+    blockquote{
+      margin-bottom: 30px;
+      padding: 35px;
+      @extend %Roboto-400;
+      font-size: 22px;
+      line-height: 32px;
+      color: $title;
+      background-color: $bg;
+      border-left: 3px solid $accent;
+    }
+  }
+  &__left-img{
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+  }
+  &__right-img{
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+  }
+  &__info{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__item:not(:last-child){
+    margin-right: 30px;
+  }
+  &__link{
+    padding-left: 25px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &--calender::before{
+    background-image: url(../images/icons/calendar-icon.png);
+    }
+    &--comment::before{
+      background-image: url(../images/icons/comment-icon.png);
+    }
+    &--user::before{
+      background-image: url(../images/icons/user-red.png);
+    }
+  }
+  &__form-title,
+  &__comments-title{
+    margin-bottom: 25px;
+    @extend %Roboto-700;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $title;
+  }
+  .comments-form{
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  &__box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  &__tegs{
+    a:hover{
+      color: $accent;
+    }
+  }
+  &__tegs,
+  &__share{
+    span{
+    @extend %Roboto-700;
+    color: $title;
+    text-transform: uppercase;
+    margin-right: 10px;
+    }
+  }
+  &__share{
+    margin-right: 18px;
+    a{
+      margin-right: 12px;
+      vertical-align: middle;
+      path{
+          fill: #727272;
+      }
+    }
+    a:hover{
+      path{
+        fill: $accent;
+      }
+    }
+  }
+  &__author{
+    display: flex;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+  }
+  &__author-img{
+    margin-right: 30px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+  &__author-name{
+    @extend %Roboto-700;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $title;
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 1245px){
+  .blog-one{
+    &__left-img{
+      width: 100%;
+      height: 450px;
+      margin-right: 0;
+    }
+    .filter-search{
+      &__input{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .blog-one{
+    &__text{
+      padding: 20px 10px 0;
+    }
+    &__info{
+      display: block;
+    }
+    &__item{
+      margin-bottom: 10px;
+    }
+    &__left-img{
+      height: 260px;
+    }
+    &__box{
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    &__tegs{
+      margin: 0 10px 10px 0;
+    }
+    &__share{
+      margin-right: 0;
+    }
+    &__author{
+      display: block;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    &__author-img{
+      margin-right: 0;
+      margin: 0 auto 10px;
+    }
+    &__author-name{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .comments-form{
+      padding-top: 0;
+      &__box-input{
+        display: block;
+        margin-bottom: 0;
+      }
+      &__text-input{
+        width: 100%;
+        margin-bottom: 30px
+      }
+      &__text-input:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .blog-one{
+    .comments{
+      display: block;
+      &__img{
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      &__content-top{
+        display: block;
+      }
+      &__content-date{
+        padding-left: 0;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .blog-one{
+    &__left-img{
+      height: 170px;
+    }
+    &__text{
+      blockquote{
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.page-404{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -40px;
+  }
+
+  &__content{
+    max-width: 570px;
+  }
+  
+  &__title{
+    @extend %Roboto-700;
+    font-size: 48px;
+    line-height: 52px;
+    color: #28384f;
+    text-transform: none;
+    margin-bottom: 25px;
+  }
+  &__text{
+    max-width: 460px;
+    margin-bottom: 65px;
+  }
+  &__link{
+    @extend %btn;
+  }
+}
+
+@media (max-width: 1245px){
+  .page-404{
+    &__inner{
+      margin-right: 0;
+    }
+    &__img{
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 1050px){
+  .page-404{
+    &__img{
+      display: none;
+    }
+  }
+}
